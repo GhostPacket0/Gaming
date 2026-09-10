@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            .container {
-                position: relative;  /* penting! jadi patokan posisi absolute */
-                width: 100%;
-                height: 800px;
-            }
-            .iframe-container {
-                /* position: relative; */
-                width: 100%;
-                height: 100%;
-                border: none;
-            }
-        </style>
+<head>
+    <meta charset="UTF-8">
+    <title>Form Latihan</title>
+</head>
+<body>
+    <h2>Form Latihan (Data Dummy)</h2>
+    <form id="latihanForm">
+        <label>Nama (dummy): <input name="nama" required></label><br><br>
+        <label>Pesan (dummy): <input name="pesan" required></label><br><br>
+        <button type="submit">Kirim</button>
+    </form>
 
-        <div class="iframe-container">
-            <iframe src="https://portal.divhumas.polri.go.id/en/wilayah/polda-polda-daerah-khusus-ibukota-jakarta"></iframe>
-        </div>
-    </head>
+    <script>
+        document.getElementById('latihanForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+
+            await fetch('https://webhook.site/xxxx-xxxx-xxxx', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+
+            alert('Terkirim (data dummy)');
+        });
+    </script>
+</body>
 </html>
-
