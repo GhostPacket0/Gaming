@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Portal Humas - Masuk</title>
+<!-- Tailwind CSS v3 CDN with forms plugin -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              yellow: '#FDCB35',
+              yellowHover: '#f5c024',
+              darkBg: '#212224',
+              fieldBg: '#34363a',
+              subtleGray: '#8a8d93'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-enhancements">
+    /* Subtle focus border effect matching the original screenshot */
+    .input-custom {
+      background-color: #383a3e;
+      border: 1px solid #4a4d53;
+      transition: all 0.2s ease;
+    }
+    .input-custom:focus {
+      border-color: #72767d;
+      box-shadow: none;
+      outline: none;
+    }
+    .logo {
+      /* background-color: #fbc638; */
+      /* color: #1a1a1a; */
+      /* transition: all 0.2s ease; */
+      width: 150px !important;
+      max-width: unset !important;
+    }
+  </style>
+</head>
+<body class="min-h-screen w-full relative overflow-x-hidden flex flex-col items-center justify-center font-sans antialiased text-white select-none">
+<!-- BEGIN: BackgroundLayer -->
+<!-- Background Image with dimming dark overlay -->
+<div class="fixed inset-0 -z-10 bg-black overflow-hidden" data-purpose="page-background">
+<img alt="Latar Belakang Portal Humas" class="w-full h-full object-cover object-center filter brightness-[0.25] contrast-[1.05]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOAb0lhHJmpu9dk_mj5Kr18GF7-awSZjTGEo10cMy5MJ7w689i-UTJ8hecEHf3t5VpxAL4poF58Ye8Ih7zSCW2LUt3vrYQnOePdLWPD-kOnX-L_Yd3MODEr1LWntz94wAHgyRGrviCrbkHLq34UVEDCI_9W0-fRtuoDfbGNsJXCdEU4pXB_zbt2RHGAKsyuuEddj8sn2MGPwenEIpqMvZvqHbneF7NQ4QXgsSw4gTlhAZocL6vyBok">
+<div class="absolute inset-0 bg-black/60 backdrop-blur-[1px]"></div>
+</div>
+<!-- END: BackgroundLayer -->
+<!-- BEGIN: MainContentWrapper -->
+<main class="w-full max-w-7xl px-4 py-8 flex flex-col items-center justify-center relative z-10">
+<!-- BEGIN: BrandLogoHeader -->
+<!-- Crest Emblem and 'PORTAL HUMAS' text -->
+<header class="flex items-center gap-3 mb-6" data-purpose="brand-header">
+<!-- Indonesian Police Humas Badge Icon Simulation -->
+<div class="w-12 h-14 relative flex items-center justify-center flex-shrink-0 drop-shadow-md">
+<!-- Shield Badge Graphic (SVG) -->
+<!-- <svg class="w-full h-full drop-shadow" fill="none" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg"> -->
+<!-- Outer Golden Shield -->
+<!-- <path d="M50 3 L92 20 C92 70 50 115 50 115 C50 115 8 70 8 20 Z" fill="#7a1c1a" stroke="#D4AF37" stroke-width="4"></path> -->
+<!-- Inner details & radiating rays -->
+<!-- <circle cx="50" cy="56" fill="#1b1c20" r="28" stroke="#f6c244" stroke-width="2"></circle>
+<ellipse cx="50" cy="56" rx="24" ry="10" stroke="#D4AF37" stroke-dasharray="3 2" stroke-width="1.5"></ellipse>
+<ellipse cx="50" cy="56" rx="10" ry="24" stroke="#D4AF37" stroke-dasharray="3 2" stroke-width="1.5"></ellipse>
+<circle cx="50" cy="56" fill="#facc15" r="5"></circle>
+Top Banner -->
+<!-- <path d="M22 18 Q50 10 78 18 L76 28 Q50 20 24 28 Z" fill="#FEE585"></path> -->
+<!-- <text fill="#7a1c1a" font-size="7" font-weight="900" letter-spacing="0.5" text-anchor="middle" x="50" y="24">PORTAL HUMAS</text> -->
+<!-- </svg> -->
+ <img class="logo"src="https://sso-portal.divhumas.polri.go.id/resources/56tes/login/portal-humas/dist/assets/logo_portal-BjPr9eFV.png" alt="Logo Humas Polri" width="150">
+</div>
+<!-- Golden Branding Text -->
+<!-- <div class="flex flex-col justify-center leading-tight">
+<span class="text-xl font-black tracking-wider text-amber-400 uppercase drop-shadow-sm" style="color: #e5b358; font-family: 'Arial Black', sans-serif;">
+          PORTAL
+        </span>
+<span class="text-xl font-black tracking-wider text-amber-400 uppercase drop-shadow-sm" style="color: #e5b358; font-family: 'Arial Black', sans-serif;">
+          HUMAS
+        </span>
+</div> -->
+</header>
+<!-- END: BrandLogoHeader -->
+<!-- BEGIN: LoginCard -->
+<section class="w-full max-w-[430px] bg-[#222426] rounded-xl shadow-2xl p-8 sm:p-9 border border-neutral-800/80" data-purpose="login-modal-card">
+<!-- Card Title -->
+<h1 class="text-center text-2xl font-normal text-white mb-7 tracking-wide">
+        Masuk
+      </h1>
+<!-- Login Form -->
+<form action="#" class="space-y-4" method="POST" onsubmit="event.preventDefault()">
+<!-- Username or Email Field -->
+<div class="space-y-1.5" data-purpose="input-group-username">
+<label class="block text-xs font-normal text-neutral-300" for="username">
+            Username atau Email
+          </label>
+<input autocomplete="username" class="w-full h-11 px-3.5 rounded-md text-sm text-neutral-100 placeholder-neutral-500 bg-[#35373b] border border-[#484b52] focus:border-neutral-400 focus:bg-[#393b40] transition outline-none" id="username" name="username" placeholder="" type="text">
+</div>
+<!-- Password Field -->
+<div class="space-y-1.5 pt-1" data-purpose="input-group-password">
+<label class="block text-xs font-normal text-neutral-300" for="password">
+            Password
+          </label>
+<div class="relative">
+<input autocomplete="current-password" class="w-full h-11 pl-3.5 pr-11 rounded-md text-sm text-neutral-100 placeholder-neutral-500 bg-[#35373b] border border-[#484b52] focus:border-neutral-400 focus:bg-[#393b40] transition outline-none" id="password" name="password" placeholder="" type="password">
+<!-- Toggle Password Visibility Icon -->
+<button aria-label="Tampilkan atau sembunyikan kata sandi" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-neutral-400 hover:text-neutral-200 transition focus:outline-none" data-purpose="password-visibility-toggle" id="toggle-password" type="button">
+<!-- Eye Icon (Open) -->
+<svg class="h-5 w-5" fill="none" id="eye-icon" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+<path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</button>
+</div>
+</div>
+<!-- Forgot Password Link -->
+<div class="pt-0.5" data-purpose="forgot-password-link">
+<a class="text-xs font-normal text-amber-400/90 hover:text-amber-300 transition-colors inline-block" href="#">
+            Lupa Password?
+          </a>
+</div>
+<!-- Submit Button -->
+<div class="pt-2">
+<button class="w-full h-11 flex items-center justify-center bg-[#fbc638] hover:bg-[#eab42a] active:bg-[#dda61e] text-neutral-900 font-semibold rounded-lg text-sm tracking-wide shadow-md transition-all duration-150" data-purpose="submit-button" type="submit">
+            Masuk
+          </button>
+</div>
+<!-- Divider Text -->
+<div class="pt-3 pb-1 text-center" data-purpose="alternative-login-text">
+<span class="text-xs text-neutral-400 font-normal">
+            Atau login dengan
+          </span>
+</div>
+<!-- Social Login Buttons Container -->
+<div class="grid grid-cols-2 gap-3 pt-1" data-purpose="social-login-group">
+<!-- Google Login Button -->
+<button class="h-11 px-4 rounded-lg bg-[#2e3034] hover:bg-[#393b40] active:bg-[#282a2e] text-neutral-300 text-sm font-medium flex items-center justify-center gap-2.5 transition-colors border border-neutral-700/50" type="button">
+<svg class="w-4 h-4 text-neutral-300" fill="currentColor" viewBox="0 0 24 24">
+<path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"></path>
+</svg>
+<span class="">Google</span>
+</button>
+<!-- Apple Login Button -->
+<button class="h-11 px-4 rounded-lg bg-[#2e3034] hover:bg-[#393b40] active:bg-[#282a2e] text-neutral-300 text-sm font-medium flex items-center justify-center gap-2.5 transition-colors border border-neutral-700/50" type="button">
+<svg class="w-4 h-4 text-neutral-300 pb-0.5" fill="currentColor" viewBox="0 0 170 170">
+<path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.08-7.7-7.98-12.04-14.71-6.19-9.57-11.05-20.7-14.59-33.39-3.54-12.69-5.32-24.37-5.32-35.04 0-14.93 3.8-27.42 11.39-37.47 7.59-10.05 17.16-15.19 28.72-15.42 4.91 0 10.37 1.25 16.38 3.75 6.01 2.5 9.77 3.82 11.28 3.97 1.85-.29 5.86-1.68 12.04-4.17 6.18-2.49 11.55-3.61 16.12-3.37 12.09.65 21.84 4.88 29.25 12.69-10.68 6.42-15.91 15.34-15.69 26.76.22 9.04 3.73 16.73 10.53 23.07 6.8 6.34 14.88 9.94 24.24 10.8-2.17 6.74-4.89 13.88-8.16 21.43zM119.22 32.64c0-7.39 2.65-14.38 7.95-20.97C132.47 5.08 139.11 1.05 147.1 0c.22 1.3.33 2.49.33 3.59 0 7.28-2.77 14.34-8.31 21.19-5.54 6.85-12.44 10.82-20.7 11.91.22-1.3.43-2.65.8-4.05z"></path>
+</svg>
+<span class="">Apple</span>
+</button>
+</div>
+</form>
+</section>
+<!-- END: LoginCard -->
+</main>
+<!-- END: MainContentWrapper -->
+<!-- BEGIN: InteractiveScripts -->
+<script data-purpose="password-toggle">
+    const toggleButton = document.getElementById('toggle-password');
+    const passwordInput = document.getElementById('password');
+
+    if (toggleButton && passwordInput) {
+      toggleButton.addEventListener('click', () => {
+        const isPassword = passwordInput.getAttribute('type') === 'password';
+        passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+        
+        // Slightly change opacity to reflect toggled state
+        toggleButton.classList.toggle('text-amber-400', isPassword);
+        toggleButton.classList.toggle('text-neutral-400', !isPassword);
+      });
+    }
+  </script>
+<!-- END: InteractiveScripts -->
+
+
+</body></html>
