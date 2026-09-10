@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arsip Sederhana</title>
+    <style>
+        .pr {
+            color: red;
+        }
+        .tx {
+            color: #007bff;
+        }
+        .Negara {
+            color: red;
+            font-weight: bold;
+        }
+        .ayo {
+            color: orange;
+            font-style: italic;
+        }
+        .daftar {
+            color: purple;
+            text-decoration: underline;
+        }
+        .segera {
+            color: green;
+            font-size: 3em;
+        }
+        .judul {
+            color: blue;
+            text-align: center;
+            font-weight: bold;
+            font-style: italic;
+        }
+        .semangat {
+            color: black;
+            font-size: 1.2em;
+            text-align: center;
+            /* font-weight: bold; */
+        }
+        .kotak-utama {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .kotak1, .kotak2{
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        .kotak3 {
+            border: 1px solid red;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1 class="pr">Laporan Profil <span class="tx">target</span></h1>
+        <p>Ini adalah contoh halaman kerangka murni tanpa gaya (CSS) atau interaksi dinamis (JS).</p>
+        <hr>
+        
+    </header>
+
+    <main>
+        <section>
+            <h2>Data Utama</h2>
+            <p>Halaman ini menggunakan tag dasar untuk menstrukturkan informasi:</p>
+            <ul>
+                <li><strong>Teks tebal</strong> untuk penekanan.</li>
+                <li>Daftar tak berurutan (bullet points) untuk rincian data.</li>
+                <li>Tag paragraf untuk teks biasa.</li>
+            </ul>
+        </section>
+     
+        <p> 
+            <span class="Negara">NEGARA MEMANGGILMU! </span><span class="ayo">Ayo.</span><span class="daftar">Daftarkan Dirimu</span><span class="segera">Segera.</span>
+        </p>
+        <h1 class="judul">Jadwal Penerimaan Calon Prajurit TNI</h1>
+        <p class="semangat">Semangat belajar yah sam!</p>
+
+        <div class="kotak-utama">
+    <div class="kotak1">
+        <!-- Hapus garis miring di depan kata image -->
+        <img src="image/ad.png" alt="Logo AD">
+        <p>TARUNA AKADEMI TNI</p>
+    </div>
+    
+    <!-- Hapus garis miring di depan kata image -->
+    <img src="image/al.png" alt="Logo AL">
+    <div class="kotak2">
+        PA PSDP
+    </div>
+    
+    <div class="kotak3">
+        PA PK TNI REGULER GEL. I
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <br>
+       <br>
+        <section>
+            <h2>Formulir Input Data</h2>
+            <form action="#">
+                <label for="kode">Kode Akses:</label><br>
+                <input type="text" id="kode" name="kode"><br><br>
+                
+                <label for="catatan">Catatan Observasi:</label><br>
+                <textarea id="catatan" name="catatan" rows="4" cols="30"></textarea><br><br>
+                
+                <input type="submit" value="Kirim Arsip">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p><i>Sistem Arsip Terminal - Akses Terbatas</i></p>
+    </footer>
+</body>
+</html>
