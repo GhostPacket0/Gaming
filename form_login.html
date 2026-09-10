@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form action="login.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="button" onclick="handleLogin()">Login</button>
+    </form>
+
+    <script>
+        function handleLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "admin" && password === "admin") {
+                window.location.href = "form_registrasi.html";
+            } else {
+                alert("Username atau password salah.");
+            }
+        }
+    </script>
+</body>
+</html>
